@@ -14,7 +14,7 @@ npm install --save-dev @nuxt/color-mode
 ## Étape 2 : Configuration dans nuxt.config.js
 Ajoutez le module dans la section buildModules de votre fichier nuxt.config.js :
 
-```
+```ts
 // nuxt.config.js
 export default {
   buildModules: ['@nuxt/color-mode'],
@@ -26,7 +26,7 @@ Le module ajoute une classe CSS automatiquement basée sur le thème actuel. Vou
 
 Exemple de fichier de style (CSS ou SCSS) :
 
-```
+```css
 /* styles/app.css */
 body.dark-mode {
   background-color: #2c3e50; /* couleur de fond pour le thème sombre */
@@ -42,19 +42,19 @@ body.light-mode {
 ## Étape 4 : Basculement entre les thèmes
 Vous pouvez maintenant basculer entre les thèmes en utilisant les méthodes fournies par le module. Par exemple, pour basculer vers le thème sombre, vous pouvez utiliser :
 
-```
+```ts
 this.$colorMode.preference = 'dark'
 ```
 
 Et pour basculer vers le thème clair :
 
-```
+```ts
 this.$colorMode.preference = 'light'
 ```
 
 Vous pouvez également définir le thème initial dans votre fichier nuxt.config.js :
 
-```
+```ts
 // nuxt.config.js
 export default {
   colorMode: {
